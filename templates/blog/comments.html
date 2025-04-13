@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Comments</title>
+</head>
+<body>
+    <h2>All Comments</h2>
+    <ul>
+        {% for comment in comments %}
+            <li><strong>Blog ID {{ comment.post.id }}:</strong> {{ comment.content }}</li>
+        {% empty %}
+            <li>No comments found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+{% extends 'blog/master.html' %}
+
+{% block title %}Home - My Blog{% endblock %}
+
+{% block content %}
+     <h1>Welcome to My Blog!</h1>
+    <ul>
+        <li><a href="{% url 'main' %}">Main</a></li>
+        <li><a href="{% url 'master' %}">Master Layout</a></li>
+        <li><a href="{% url 'users' %}">Users</a></li>
+        <li><a href="{% url 'blogs' %}">Blogs</a></li>
+        <li><a href="{% url 'comments' %}">Comments</a></li>
+        <li><a href="{% url 'categories' %}">Categories</a></li>
+    </ul>
+{% endblock %}
+

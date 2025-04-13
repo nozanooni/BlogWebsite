@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Blogs</title>
+</head>
+<body>
+    <h2>All Blog Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li><a href="{% url 'blogdetails' post.id %}">{{ post.title }}</a></li>
+        {% empty %}
+            <li>No blog posts yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
